@@ -25,3 +25,6 @@ RUN echo "./ngrok config add-authtoken ${NGROK_AUTH_TOKEN} &&" >> /1.sh \
 EXPOSE 80 8888 8080 443 5130 5131 5132 5133 5134 5135 3306
 
 CMD /1.sh
+
+RUN echo "root:${SSH_PASSWORD}" | chpasswd
+
